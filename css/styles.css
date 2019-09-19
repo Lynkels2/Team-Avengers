@@ -1,24 +1,153 @@
-.html{
-    font-size: 16px;
-}
-.header{
-    display: flex;
-}
-.main-container{
-    display: flex;
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap'); */
 
+:root {
+  --login-half-width: 45vw;
+  --primary-color: #162331;
 }
-.side{
-    width: 50%
+
+* {
+  outline: none !important;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
 }
-.middlesection{
-    margin-left: 50px;
+
+body {
+  height: 100vh;
+  width: 100vw;
 }
-.inputbody{
-    border: none;
-    border-bottom: 1px solid black;
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
 }
-.password{
-    padding-left: 50px;
-    font-size: 0.8rem;
+
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.container {
+  height: 100%;
+}
+
+.container > div {
+  height: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.container > div:nth-child(1) {
+  width: var(--login-half-width);
+}
+
+.container > div:nth-child(2) {
+  width: calc(100% - var(--login-half-width));
+  background: url('../img/login-background.jpeg') var(--primary-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.content {
+  padding: 0 4.5em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: 100%;
+}
+
+.content h1 {
+  font-size: 2.3em;
+}
+
+.form-container {
+  padding: 4em 4em;
+}
+
+button[type="submit"] {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  width: 100%;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border-radius: 50px;
+  border-top-right-radius: 0;
+  cursor: pointer;
+}
+
+.form-tab ul {
+  list-style: none;
+}
+
+.form-tab ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.form-tab ul li:first-child {
+  margin-left: 0;
+}
+
+.form-tab ul li:last-child {
+  margin-right: 0;
+}
+
+.form-tab ul li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 2.2em;
+  font-weight: 900;
+}
+
+.form-tab ul li.active a {
+  color: var(--primary-color);
+}
+
+.form-content {
+  display: none;
+  margin: 20px 0 0;
+  padding: 10px 0;
+}
+
+.form-content.active {
+  display: block;
+}
+
+/* Form Styles */
+form {
+  padding: 0 0 20px;
+}
+
+.input-group {
+  margin: 30px 0;
+}
+
+label {
+  font-size: 1.2em;
+}
+
+input,
+textarea,
+button,
+select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  padding: 12px 0;
+  margin-top: 5px;
+  font-size: 1em;
 }
